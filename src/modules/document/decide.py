@@ -33,6 +33,7 @@ def make_decision(message) -> str:
     return response.output_text
 
 def safe_make_decision(message) -> str:
+    print("chegou aqui")
     try:
         return make_decision(message)
     except RateLimitException:

@@ -8,9 +8,9 @@ from document_module import DocumentModule
 from comparator import Comparator
 from md_parser import MarkdownParser
 from md_manager import MarkdownManager
-from semantic_block import SemanticBlock
+from semantic_block import SemanticBlock, SentenceType
 
-#TODO invert the dependence of the trigger, find ideal design pattern
+
 
 class FolderChangeHandler(FileSystemEventHandler):
     def __init__(self, document_module:DocumentModule):
@@ -28,22 +28,9 @@ class FolderChangeHandler(FileSystemEventHandler):
     @debounce(wait=2)
     @filter_files(extensions_to_filter=[".md"])
     def on_modified(self, event):
-
+        #TODO conectar com environment context queue, enviando as mudanças para la
         modified = self.document_module.check_file_last_change(event.src_path)
-        if modified:
-            print("block" , modified.block)
-            print("last_change: ",modified.last_change)
-            answer = SemanticBlock(
-                block="respondendo \n a \n a \n aaaaa",
-                context="a",
-                last_change=modified.last_change,
-                location=modified.location
-
-            )
-            self.document_module.answer_in_document(event.src_path, answer)
-        else:
-            print("no block")
-        # print(safe_make_decision(modified))
+        print(modified)
 
     @filter_files(filterDirectory=True)
     def on_moved(self, event):
