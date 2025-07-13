@@ -1,0 +1,923 @@
+{
+    "title": "Plano de Estudos Completo - Inteligência Artificial e LLMs",
+    "description": "Plano estruturado para alcançar conhecimento generalista em IA e LLMs, com foco em computer vision e projetos práticos",
+    "target_level": "Generalista",
+    "focus_areas": ["Computer Vision", "Geração de Imagens", "Reconhecimento de Objetos", "LLMs"],
+    "learning_approach": "Baseado em projetos",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Fundamentos Matemáticos e Estatísticos",
+        "summary": "Consolidar base matemática essencial para compreender algoritmos de IA avançados",
+        "concluded": false,
+        "substeps": [
+          {
+            "number": 1,
+            "title": "Álgebra Linear Aplicada",
+            "summary": "Dominar operações matriciais e vetoriais fundamentais para IA",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Operações com Matrizes e Vetores",
+                "summary": "Multiplicação matricial, produto escalar, normas vetoriais",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "Decomposições Matriciais",
+                "summary": "SVD, eigenvalores, eigenvectores e suas aplicações em IA",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 3,
+                "title": "Espaços Vetoriais em IA",
+                "summary": "Embeddings, representações vetoriais e transformações lineares",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Cálculo Diferencial e Otimização",
+            "summary": "Fundamentos para algoritmos de treinamento e backpropagation",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Derivadas Parciais e Gradientes",
+                "summary": "Cálculo de gradientes para otimização de funções de custo",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "Métodos de Otimização",
+                "summary": "Gradient descent, Adam, RMSprop e variações",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Probabilidade e Estatística",
+            "summary": "Base estatística para compreender incerteza e distribuições em IA",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Distribuições de Probabilidade",
+                "summary": "Gaussiana, Bernoulli, multinomial e suas aplicações",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "Inferência Bayesiana",
+                "summary": "Teorema de Bayes e aplicações em machine learning",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": 2,
+        "title": "Aprendizado de Máquina Clássico",
+        "summary": "Compreender algoritmos fundamentais que precedem deep learning",
+        "concluded": false,
+        "substeps": [
+          {
+            "number": 1,
+            "title": "Algoritmos de Classificação",
+            "summary": "Implementar e compreender algoritmos básicos de classificação",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Regressão Logística",
+                "summary": "Fundamentos matemáticos e implementação prática",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "SVM (Support Vector Machines)",
+                "summary": "Teoria dos hiperplanos e kernel trick",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 3,
+                "title": "Árvores de Decisão e Random Forest",
+                "summary": "Métodos ensemble e redução de overfitting",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Processamento de Dados",
+            "summary": "Técnicas de preparação e transformação de dados",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Normalização e Padronização",
+                "summary": "Técnicas de scaling e suas implicações",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "Redução de Dimensionalidade",
+                "summary": "PCA, t-SNE e suas aplicações práticas",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Validação e Avaliação",
+            "summary": "Métodos para avaliar performance de modelos",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Cross-validation",
+                "summary": "K-fold, leave-one-out e validação temporal",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "Métricas de Avaliação",
+                "summary": "Accuracy, precision, recall, F1-score, AUC-ROC",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": 3,
+        "title": "Redes Neurais e Deep Learning",
+        "summary": "Aprofundar conhecimento em arquiteturas neurais modernas",
+        "concluded": false,
+        "substeps": [
+          {
+            "number": 1,
+            "title": "Fundamentos de Redes Neurais",
+            "summary": "Consolidar base teórica e prática de redes neurais",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Perceptron e Multicamadas",
+                "summary": "Evolução histórica e limitações do perceptron",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "Backpropagation Detalhado",
+                "summary": "Implementação matemática completa do algoritmo",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 3,
+                "title": "Funções de Ativação",
+                "summary": "ReLU, sigmoid, tanh, softmax e suas propriedades",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Arquiteturas Avançadas",
+            "summary": "Explorar arquiteturas especializadas para diferentes domínios",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Redes Convolucionais (CNNs)",
+                "summary": "Arquitetura fundamental para processamento de imagens",
+                "concluded": false,
+                "substeps": [
+                  {
+                    "number": 1,
+                    "title": "Camadas Convolucionais",
+                    "summary": "Filtros, kernels, stride, padding e feature maps",
+                    "concluded": false,
+                    "substeps": []
+                  },
+                  {
+                    "number": 2,
+                    "title": "Pooling e Normalização",
+                    "summary": "Max pooling, average pooling, batch normalization",
+                    "concluded": false,
+                    "substeps": []
+                  },
+                  {
+                    "number": 3,
+                    "title": "Arquiteturas Clássicas",
+                    "summary": "LeNet, AlexNet, VGG, ResNet, DenseNet",
+                    "concluded": false,
+                    "substeps": []
+                  }
+                ]
+              },
+              {
+                "number": 2,
+                "title": "Redes Recorrentes (RNNs)",
+                "summary": "Processamento de sequences e dados temporais",
+                "concluded": false,
+                "substeps": [
+                  {
+                    "number": 1,
+                    "title": "LSTM e GRU",
+                    "summary": "Soluções para vanishing gradient em sequências",
+                    "concluded": false,
+                    "substeps": []
+                  },
+                  {
+                    "number": 2,
+                    "title": "Bidirectional RNNs",
+                    "summary": "Processamento bidirecional de sequências",
+                    "concluded": false,
+                    "substeps": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Regularização e Otimização",
+            "summary": "Técnicas para melhorar performance e evitar overfitting",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Dropout e Regularização",
+                "summary": "L1, L2 regularization, dropout, early stopping",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "Otimizadores Avançados",
+                "summary": "Adam, AdamW, RMSprop, learning rate scheduling",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Computer Vision e Processamento de Imagens",
+        "summary": "Dominar técnicas de reconhecimento e geração de imagens",
+        "concluded": false,
+        "substeps": [
+          {
+            "number": 1,
+            "title": "Fundamentos de Visão Computacional",
+            "summary": "Princípios básicos do processamento digital de imagens",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Representação Digital de Imagens",
+                "summary": "Pixels, canais de cor, formatos de imagem",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "Pré-processamento de Imagens",
+                "summary": "Filtragem, redimensionamento, augmentação de dados",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 3,
+                "title": "Detecção de Características",
+                "summary": "Bordas, cantos, texturas e descritores de imagem",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Reconhecimento de Objetos",
+            "summary": "Técnicas para identificar e localizar objetos em imagens",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Classificação de Imagens",
+                "summary": "CNNs para classificação multi-classe",
+                "concluded": false,
+                "substeps": [
+                  {
+                    "number": 1,
+                    "title": "Transfer Learning",
+                    "summary": "Utilizar modelos pré-treinados (ImageNet)",
+                    "concluded": false,
+                    "substeps": []
+                  },
+                  {
+                    "number": 2,
+                    "title": "Fine-tuning",
+                    "summary": "Adaptar modelos para domínios específicos",
+                    "concluded": false,
+                    "substeps": []
+                  }
+                ]
+              },
+              {
+                "number": 2,
+                "title": "Detecção de Objetos",
+                "summary": "Localizar e classificar múltiplos objetos",
+                "concluded": false,
+                "substeps": [
+                  {
+                    "number": 1,
+                    "title": "YOLO (You Only Look Once)",
+                    "summary": "Detecção em tempo real single-shot",
+                    "concluded": false,
+                    "substeps": []
+                  },
+                  {
+                    "number": 2,
+                    "title": "R-CNN e variações",
+                    "summary": "Region-based CNN para detecção precisa",
+                    "concluded": false,
+                    "substeps": []
+                  }
+                ]
+              },
+              {
+                "number": 3,
+                "title": "Segmentação de Imagens",
+                "summary": "Segmentação semântica e de instâncias",
+                "concluded": false,
+                "substeps": [
+                  {
+                    "number": 1,
+                    "title": "U-Net e FCN",
+                    "summary": "Arquiteturas para segmentação pixel-wise",
+                    "concluded": false,
+                    "substeps": []
+                  },
+                  {
+                    "number": 2,
+                    "title": "Mask R-CNN",
+                    "summary": "Segmentação de instâncias",
+                    "concluded": false,
+                    "substeps": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Geração de Imagens",
+            "summary": "Técnicas para criar imagens sintéticas",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Autoencoders",
+                "summary": "Compressão e reconstrução de imagens",
+                "concluded": false,
+                "substeps": [
+                  {
+                    "number": 1,
+                    "title": "Variational Autoencoders (VAE)",
+                    "summary": "Geração probabilística de imagens",
+                    "concluded": false,
+                    "substeps": []
+                  }
+                ]
+              },
+              {
+                "number": 2,
+                "title": "Generative Adversarial Networks (GANs)",
+                "summary": "Redes adversariais para geração realística",
+                "concluded": false,
+                "substeps": [
+                  {
+                    "number": 1,
+                    "title": "GAN Básico",
+                    "summary": "Arquitetura generator-discriminator",
+                    "concluded": false,
+                    "substeps": []
+                  },
+                  {
+                    "number": 2,
+                    "title": "Variações de GANs",
+                    "summary": "DCGAN, StyleGAN, CycleGAN",
+                    "concluded": false,
+                    "substeps": []
+                  },
+                  {
+                    "number": 3,
+                    "title": "Conditional GANs",
+                    "summary": "Controle da geração com condições",
+                    "concluded": false,
+                    "substeps": []
+                  }
+                ]
+              },
+              {
+                "number": 3,
+                "title": "Diffusion Models",
+                "summary": "Modelos de difusão para geração de alta qualidade",
+                "concluded": false,
+                "substeps": [
+                  {
+                    "number": 1,
+                    "title": "DDPM (Denoising Diffusion)",
+                    "summary": "Processo de difusão e reverse process",
+                    "concluded": false,
+                    "substeps": []
+                  },
+                  {
+                    "number": 2,
+                    "title": "Stable Diffusion",
+                    "summary": "Implementação eficiente em latent space",
+                    "concluded": false,
+                    "substeps": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Large Language Models (LLMs)",
+        "summary": "Aprofundar conhecimento em modelos de linguagem modernos",
+        "concluded": false,
+        "substeps": [
+          {
+            "number": 1,
+            "title": "Arquiteturas Transformer",
+            "summary": "Compreender a arquitetura base dos LLMs modernos",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Attention Mechanism",
+                "summary": "Self-attention e multi-head attention",
+                "concluded": false,
+                "substeps": [
+                  {
+                    "number": 1,
+                    "title": "Scaled Dot-Product Attention",
+                    "summary": "Cálculo matemático do attention",
+                    "concluded": false,
+                    "substeps": []
+                  },
+                  {
+                    "number": 2,
+                    "title": "Positional Encoding",
+                    "summary": "Representação de posições em sequências",
+                    "concluded": false,
+                    "substeps": []
+                  }
+                ]
+              },
+              {
+                "number": 2,
+                "title": "Encoder-Decoder vs Decoder-Only",
+                "summary": "Diferenças arquiteturais e casos de uso",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 3,
+                "title": "Normalização e Regularização",
+                "summary": "Layer normalization, dropout em transformers",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Processamento de Linguagem Natural",
+            "summary": "Técnicas fundamentais para trabalhar com texto",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Tokenização e Embeddings",
+                "summary": "Conversão de texto em representações numéricas",
+                "concluded": false,
+                "substeps": [
+                  {
+                    "number": 1,
+                    "title": "Word Embeddings",
+                    "summary": "Word2Vec, GloVe, FastText",
+                    "concluded": false,
+                    "substeps": []
+                  },
+                  {
+                    "number": 2,
+                    "title": "Contextual Embeddings",
+                    "summary": "ELMo, BERT embeddings",
+                    "concluded": false,
+                    "substeps": []
+                  },
+                  {
+                    "number": 3,
+                    "title": "Tokenização Avançada",
+                    "summary": "BPE, SentencePiece, WordPiece",
+                    "concluded": false,
+                    "substeps": []
+                  }
+                ]
+              },
+              {
+                "number": 2,
+                "title": "Modelos de Linguagem Pré-treinados",
+                "summary": "Compreender modelos base como BERT, GPT",
+                "concluded": false,
+                "substeps": [
+                  {
+                    "number": 1,
+                    "title": "BERT e variações",
+                    "summary": "Bidirectional encoder representations",
+                    "concluded": false,
+                    "substeps": []
+                  },
+                  {
+                    "number": 2,
+                    "title": "GPT Family",
+                    "summary": "Generative pre-trained transformers",
+                    "concluded": false,
+                    "substeps": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "LLMs Modernos e Escalabilidade",
+            "summary": "Modelos em larga escala e técnicas de otimização",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Scaling Laws",
+                "summary": "Relação entre dados, parâmetros e performance",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "Fine-tuning e Adaptation",
+                "summary": "Técnicas para adaptar LLMs a tarefas específicas",
+                "concluded": false,
+                "substeps": [
+                  {
+                    "number": 1,
+                    "title": "Instruction Tuning",
+                    "summary": "Treinamento para seguir instruções",
+                    "concluded": false,
+                    "substeps": []
+                  },
+                  {
+                    "number": 2,
+                    "title": "RLHF (Reinforcement Learning from Human Feedback)",
+                    "summary": "Alinhamento com preferências humanas",
+                    "concluded": false,
+                    "substeps": []
+                  }
+                ]
+              },
+              {
+                "number": 3,
+                "title": "Emergent Abilities",
+                "summary": "Capacidades emergentes em modelos grandes",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": 6,
+        "title": "Projetos Práticos Integrados",
+        "summary": "Aplicar conhecimento através de projetos hands-on",
+        "concluded": false,
+        "substeps": [
+          {
+            "number": 1,
+            "title": "Projeto: Sistema de Reconhecimento de Objetos",
+            "summary": "Implementar pipeline completo de detecção de objetos",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Coleta e Preparação de Dados",
+                "summary": "Dataset customizado com anotações",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "Implementação do Modelo",
+                "summary": "YOLO ou R-CNN para detecção",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 3,
+                "title": "Avaliação e Otimização",
+                "summary": "Métricas de performance e melhorias",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 4,
+                "title": "Deploy e Interface",
+                "summary": "Aplicação web ou mobile para demonstração",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Projeto: Gerador de Imagens Condicionais",
+            "summary": "Criar sistema de geração de imagens com prompts",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Implementação de GAN Condicional",
+                "summary": "GAN que gera imagens baseadas em texto",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "Treinamento e Tuning",
+                "summary": "Otimização da qualidade das imagens geradas",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 3,
+                "title": "Interface de Usuário",
+                "summary": "Sistema web para geração interativa",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Projeto: Chatbot com LLM Customizado",
+            "summary": "Fine-tuning de modelo de linguagem para domínio específico",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Seleção e Preparação do Modelo Base",
+                "summary": "Escolher LLM apropriado para fine-tuning",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "Curadoria de Dataset",
+                "summary": "Criar dataset de conversas para o domínio",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 3,
+                "title": "Fine-tuning Process",
+                "summary": "Adaptar modelo para conversas específicas",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 4,
+                "title": "Avaliação e Deployment",
+                "summary": "Testar qualidade e disponibilizar o chatbot",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Projeto: Sistema Multimodal",
+            "summary": "Integrar visão computacional com LLM",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Arquitetura Multimodal",
+                "summary": "Combinar CNN para visão com transformer para linguagem",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "Implementação VQA",
+                "summary": "Visual Question Answering system",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 3,
+                "title": "Evaluation e Metrics",
+                "summary": "Avaliar performance em tarefas multimodais",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Técnicas Avançadas e Tendências",
+        "summary": "Explorar fronteiras da pesquisa em IA",
+        "concluded": false,
+        "substeps": [
+          {
+            "number": 1,
+            "title": "Efficient AI",
+            "summary": "Técnicas para otimizar modelos e reduzir custos",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Model Compression",
+                "summary": "Quantização, pruning, distillation",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "Efficient Architectures",
+                "summary": "MobileNet, EfficientNet, DistilBERT",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 3,
+                "title": "Edge AI",
+                "summary": "Deployment em dispositivos com recursos limitados",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Interpretability e Explainability",
+            "summary": "Compreender como modelos tomam decisões",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Attention Visualization",
+                "summary": "Visualizar padrões de atenção em modelos",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "Grad-CAM e Saliency Maps",
+                "summary": "Explicar decisões em computer vision",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 3,
+                "title": "SHAP e LIME",
+                "summary": "Explicações local e global de modelos",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Robustness e Safety",
+            "summary": "Garantir confiabilidade e segurança de sistemas de IA",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Adversarial Attacks e Defenses",
+                "summary": "Vulnerabilidades e proteções contra ataques",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "Uncertainty Quantification",
+                "summary": "Medir confiança em predições",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 3,
+                "title": "AI Safety e Alignment",
+                "summary": "Garantir comportamento seguro em IA",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "number": 8,
+        "title": "Ferramentas e Ecossistema",
+        "summary": "Dominar ferramentas essenciais para desenvolvimento em IA",
+        "concluded": false,
+        "substeps": [
+          {
+            "number": 1,
+            "title": "Frameworks de Deep Learning",
+            "summary": "Dominar principais bibliotecas de IA",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "PyTorch Avançado",
+                "summary": "Distributed training, custom operators",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "TensorFlow/Keras",
+                "summary": "Comparação e casos de uso específicos",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 3,
+                "title": "Hugging Face Ecosystem",
+                "summary": "Transformers, datasets, spaces",
+                "concluded": false,
+                "substeps": []
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "MLOps e Produção",
+            "summary": "Colocar modelos em produção de forma eficiente",
+            "concluded": false,
+            "substeps": [
+              {
+                "number": 1,
+                "title": "Model Versioning",
+                "summary": "MLflow, Weights & Biases, DVC",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 2,
+                "title": "Containerização",
+                "summary": "Docker para modelos de IA",
+                "concluded": false,
+                "substeps": []
+              },
+              {
+                "number": 3,
+                "title": "Model Serving",
+                "summary": "FastAPI, TorchServe, TensorFlow Serving",
+                "concluded": false,
+                "substeps": []
+              }
+            ]

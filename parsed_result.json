@@ -1,367 +1,318 @@
 {
+    "class": "root",
     "type": "root",
     "content": "",
-    "line_count": 55,
+    "line_count": 30,
+    "line_number": 0,
     "children": [
         {
-            "type": "heading",
-            "content": "# Só pra testar",
-            "heading_level": 1,
-            "line_count": 55,
+            "class": "tx-root",
+            "type": "text",
+            "content": " Me esclareça sobre [[Revolta de Canudos]]",
+            "line_count": 1,
+            "line_number": 1,
             "children": [
                 {
+                    "type": "question",
+                    "content": "[[Revolta de Canudos]]",
+                    "start": 20,
+                    "end": 42,
+                    "line_count": 0,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "class": "vd-root",
+            "type": "empty",
+            "content": "",
+            "line_count": 1,
+            "line_number": 2,
+            "children": []
+        },
+        {
+            "class": "vd-root",
+            "type": "empty",
+            "content": "",
+            "line_count": 1,
+            "line_number": 3,
+            "children": []
+        },
+        {
+            "class": "tx-root",
+            "type": "text",
+            "content": "O que é [[Protocolo A2A do Google]]",
+            "line_count": 1,
+            "line_number": 4,
+            "children": [
+                {
+                    "type": "question",
+                    "content": "[[Protocolo A2A do Google]]",
+                    "start": 8,
+                    "end": 35,
+                    "line_count": 0,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "class": "vd-root",
+            "type": "empty",
+            "content": "",
+            "line_count": 1,
+            "line_number": 5,
+            "children": []
+        },
+        {
+            "class": "tx-root",
+            "type": "text",
+            "content": "Me fale sobre [[Agente de IA]]",
+            "line_count": 1,
+            "line_number": 6,
+            "children": [
+                {
+                    "type": "question",
+                    "content": "[[Agente de IA]]",
+                    "start": 14,
+                    "end": 30,
+                    "line_count": 0,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "class": "vd-root",
+            "type": "empty",
+            "content": "",
+            "line_count": 1,
+            "line_number": 7,
+            "children": []
+        },
+        {
+            "class": "tx-root",
+            "type": "text",
+            "content": "alou",
+            "line_count": 1,
+            "line_number": 8,
+            "children": []
+        },
+        {
+            "class": "vd-root",
+            "type": "empty",
+            "content": "",
+            "line_count": 1,
+            "line_number": 9,
+            "children": []
+        },
+        {
+            "class": "vd-root",
+            "type": "empty",
+            "content": "",
+            "line_count": 1,
+            "line_number": 10,
+            "children": []
+        },
+        {
+            "class": "bimp-root",
+            "type": "block_highlight",
+            "content": "> Me fale sobre a Guerra fria por favor aqui",
+            "line_count": 1,
+            "line_number": 11,
+            "children": [
+                {
+                    "class": "bimpt",
                     "type": "text",
-                    "content": "# Só pra testar",
+                    "content": "> Me fale sobre a Guerra fria por favor aqui",
                     "line_count": 1,
+                    "line_number": 11,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "class": "vd-root",
+            "type": "empty",
+            "content": "",
+            "line_count": 1,
+            "line_number": 12,
+            "children": []
+        },
+        {
+            "class": "vd-root",
+            "type": "empty",
+            "content": "",
+            "line_count": 1,
+            "line_number": 13,
+            "children": []
+        },
+        {
+            "class": "vd-root",
+            "type": "empty",
+            "content": "",
+            "line_count": 1,
+            "line_number": 14,
+            "children": []
+        },
+        {
+            "class": "bhead-root-root",
+            "type": "heading",
+            "content": "## Segunda Guerra mundial",
+            "heading_level": 2,
+            "line_count": 16,
+            "line_number": 15,
+            "children": [
+                {
+                    "class": "bheadt-bhead-root",
+                    "type": "text",
+                    "content": "## Segunda Guerra mundial",
+                    "line_count": 1,
+                    "line_number": 15,
                     "children": []
                 },
                 {
-                    "type": "text",
-                    "content": "testeasas",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
+                    "class": "vd-bhead-root",
                     "type": "empty",
                     "content": "",
                     "line_count": 1,
+                    "line_number": 16,
                     "children": []
                 },
                 {
-                    "type": "block_highlight",
-                    "content": ">a asdasdas",
+                    "class": "tx-bhead-root",
+                    "type": "text",
+                    "content": "Sobre o assunto",
                     "line_count": 1,
+                    "line_number": 17,
                     "children": []
                 },
                 {
+                    "class": "vd-bhead-root",
                     "type": "empty",
                     "content": "",
                     "line_count": 1,
+                    "line_number": 18,
                     "children": []
                 },
                 {
-                    "type": "text",
-                    "content": "[[aasdasd]] ",
-                    "line_count": 1,
-                    "children": [
-                        {
-                            "type": "question",
-                            "content": "[[aasdasd]]",
-                            "line_count": 0,
-                            "children": []
-                        }
-                    ]
-                },
-                {
+                    "class": "vd-bhead-root",
                     "type": "empty",
                     "content": "",
                     "line_count": 1,
+                    "line_number": 19,
                     "children": []
                 },
                 {
-                    "type": "block_highlight",
-                    "content": ">  Ordem",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
-                    "type": "empty",
-                    "content": "",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
-                    "type": "text",
-                    "content": "Sasdasdas [ ] asasd ",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
-                    "type": "empty",
-                    "content": "",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
-                    "type": "text",
-                    "content": "[ ] asdasds [ ] asdasd",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
-                    "type": "block_list",
-                    "content": "",
-                    "leading_whitespace_level": 0,
-                    "line_count": 2,
-                    "children": [
-                        {
-                            "type": "list_item",
-                            "content": "- [ ] asdasda",
-                            "line_count": 1,
-                            "children": []
-                        },
-                        {
-                            "type": "list_item",
-                            "content": "- [ ] ",
-                            "line_count": 1,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "type": "empty",
-                    "content": "",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
-                    "type": "text",
-                    "content": "[ ] resposta",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
-                    "type": "empty",
-                    "content": "",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
-                    "type": "text",
-                    "content": "só falando aq",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
-                    "type": "text",
-                    "content": "declaração",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
-                    "type": "empty",
-                    "content": "",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
-                    "type": "text",
-                    "content": "[x ] Sim [ ] Não",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
-                    "type": "empty",
-                    "content": "",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
-                    "type": "text",
-                    "content": "Goal",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
-                    "type": "empty",
-                    "content": "",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
-                    "type": "text",
-                    "content": "Gostaria -> ajsute os passosahusdhuasd",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
-                    "type": "text",
-                    "content": "asd",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
-                    "type": "empty",
-                    "content": "",
-                    "line_count": 1,
-                    "children": []
-                },
-                {
+                    "class": "bkey-bhead-root-bhead-root",
                     "type": "block_keyword",
-                    "content": "#Question",
-                    "line_count": 13,
+                    "content": "#Question ",
+                    "line_count": 11,
+                    "line_number": 20,
                     "children": [
                         {
+                            "class": "bkeyt-bkey-bhead-root",
                             "type": "text",
-                            "content": "#Question",
+                            "content": "#Question ",
                             "line_count": 1,
+                            "line_number": 20,
                             "children": []
                         },
                         {
-                            "type": "text",
-                            "content": "-----",
-                            "line_count": 1,
-                            "children": []
-                        },
-                        {
-                            "type": "empty",
-                            "content": "",
-                            "line_count": 1,
-                            "children": []
-                        },
-                        {
-                            "type": "text",
-                            "content": "Exercício 1",
-                            "line_count": 1,
-                            "children": []
-                        },
-                        {
-                            "type": "empty",
-                            "content": "",
-                            "line_count": 1,
-                            "children": []
-                        },
-                        {
-                            "type": "text",
-                            "content": "Quem é china?",
-                            "line_count": 1,
-                            "children": []
-                        },
-                        {
-                            "type": "empty",
-                            "content": "",
-                            "line_count": 1,
-                            "children": []
-                        },
-                        {
-                            "type": "block_list",
-                            "content": "",
-                            "leading_whitespace_level": 0,
-                            "line_count": 4,
-                            "children": [
-                                {
-                                    "type": "list_item",
-                                    "content": "- [x] China pae",
-                                    "line_count": 1,
-                                    "children": []
-                                },
-                                {
-                                    "type": "list_item",
-                                    "content": "- [x] Severion",
-                                    "line_count": 1,
-                                    "children": []
-                                },
-                                {
-                                    "type": "list_item",
-                                    "content": "- [ ] Cabrunca",
-                                    "line_count": 1,
-                                    "children": []
-                                },
-                                {
-                                    "type": "list_item",
-                                    "content": "- [ ] sepa",
-                                    "line_count": 1,
-                                    "children": []
-                                }
-                            ]
-                        },
-                        {
-                            "type": "empty",
-                            "content": "",
-                            "line_count": 1,
-                            "children": []
-                        }
-                    ]
-                },
-                {
-                    "type": "block_keyword",
-                    "content": "#Question 2",
-                    "line_count": 14,
-                    "children": [
-                        {
-                            "type": "text",
-                            "content": "#Question 2",
-                            "line_count": 1,
-                            "children": []
-                        },
-                        {
+                            "class": "div-bkey-bhead-root",
                             "type": "text",
                             "content": "---",
                             "line_count": 1,
+                            "line_number": 21,
                             "children": []
                         },
                         {
+                            "class": "vd-bkey-bhead-root",
                             "type": "empty",
                             "content": "",
                             "line_count": 1,
+                            "line_number": 22,
                             "children": []
                         },
                         {
+                            "class": "tx-bkey-bhead-root",
                             "type": "text",
-                            "content": "Que ir pra onde fih?",
+                            "content": "Uma pergunta da ia",
                             "line_count": 1,
+                            "line_number": 23,
                             "children": []
                         },
                         {
+                            "class": "vd-bkey-bhead-root",
                             "type": "empty",
                             "content": "",
                             "line_count": 1,
+                            "line_number": 24,
                             "children": []
                         },
                         {
-                            "type": "block_list",
+                            "class": "tx-bkey-bhead-root",
+                            "type": "text",
+                            "content": "sua reposta ",
+                            "line_count": 1,
+                            "line_number": 25,
+                            "children": []
+                        },
+                        {
+                            "class": "vd-bkey-bhead-root",
+                            "type": "empty",
                             "content": "",
-                            "leading_whitespace_level": 0,
-                            "line_count": 2,
+                            "line_count": 1,
+                            "line_number": 26,
+                            "children": []
+                        },
+                        {
+                            "class": "tx-bkey-bhead-root",
+                            "type": "text",
+                            "content": "#END ",
+                            "line_count": 1,
+                            "line_number": 27,
                             "children": [
                                 {
-                                    "type": "list_item",
-                                    "content": "- [ ] praq",
-                                    "line_count": 1,
-                                    "children": []
-                                },
-                                {
-                                    "type": "list_item",
-                                    "content": "- [ ] prala",
-                                    "line_count": 1,
+                                    "type": "tag",
+                                    "content": "#END",
+                                    "start": 0,
+                                    "end": 4,
+                                    "line_count": 0,
                                     "children": []
                                 }
                             ]
                         },
                         {
+                            "class": "div-bkey-bhead-root",
                             "type": "text",
-                            "content": "''",
+                            "content": "---",
                             "line_count": 1,
+                            "line_number": 28,
                             "children": []
                         },
                         {
-                            "type": "empty",
+                            "class": "blist-bkey-bhead-root-bkey-bhead-root",
+                            "type": "block_list",
                             "content": "",
+                            "leading_whitespace_level": 0,
                             "line_count": 1,
-                            "children": []
+                            "line_number": 29,
+                            "children": [
+                                {
+                                    "class": "blln-blist-bkey-bhead-root",
+                                    "type": "list_item",
+                                    "content": "- [x] Próxima etapa",
+                                    "line_count": 1,
+                                    "line_number": 29,
+                                    "children": []
+                                }
+                            ]
                         },
                         {
+                            "class": "vd-bkey-bhead-root",
                             "type": "empty",
                             "content": "",
                             "line_count": 1,
-                            "children": []
-                        },
-                        {
-                            "type": "empty",
-                            "content": "",
-                            "line_count": 1,
-                            "children": []
-                        },
-                        {
-                            "type": "empty",
-                            "content": "",
-                            "line_count": 1,
-                            "children": []
-                        },
-                        {
-                            "type": "empty",
-                            "content": "",
-                            "line_count": 1,
+                            "line_number": 30,
                             "children": []
                         }
                     ]

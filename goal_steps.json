@@ -1,0 +1,102 @@
+{
+    "title": "Plano de Estudos para Empreender",
+    "summary": "Este plano de estudos visa fornecer uma compreensão intermediária sobre como empreender, incluindo a abertura de uma empresa e o atendimento a clientes.",
+    "done": false,
+    "subtopics": [
+        {
+            "title": "Introdução ao Empreendedorismo",
+            "summary": "Compreenda o que é empreendedorismo e suas características principais.",
+            "done": false,
+            "subtopics": [
+                {
+                    "title": "O que é Empreendedorismo?",
+                    "summary": "Definição e importância do empreendedorismo na economia.",
+                    "done": false,
+                    "subtopics": []
+                },
+                {
+                    "title": "Características de um Empreendedor",
+                    "summary": "Exploração das qualidades e habilidades essenciais para empreender.",
+                    "done": false,
+                    "subtopics": []
+                }
+            ]
+        },
+        {
+            "title": "Planejamento de Negócios",
+            "summary": "Aprenda a estruturar um plano de negócios eficaz.",
+            "done": false,
+            "subtopics": [
+                {
+                    "title": "Pesquisa de Mercado",
+                    "summary": "Como realizar uma análise de mercado para identificar oportunidades.",
+                    "done": false,
+                    "subtopics": []
+                },
+                {
+                    "title": "Estruturação do Plano de Negócios",
+                    "summary": "Componentes essenciais de um plano de negócios.",
+                    "done": false,
+                    "subtopics": []
+                }
+            ]
+        },
+        {
+            "title": "Abrindo uma Empresa",
+            "summary": "Passos para formalizar a abertura de uma empresa.",
+            "done": false,
+            "subtopics": [
+                {
+                    "title": "Escolha do Tipo de Empresa",
+                    "summary": "Diferenças entre MEI, EIRELI, LTDA, etc.",
+                    "done": false,
+                    "subtopics": []
+                },
+                {
+                    "title": "Registro e Legalização",
+                    "summary": "Processos legais e burocráticos para abrir uma empresa.",
+                    "done": false,
+                    "subtopics": []
+                }
+            ]
+        },
+        {
+            "title": "Atendimento ao Cliente",
+            "summary": "Estratégias para conquistar e manter clientes.",
+            "done": false,
+            "subtopics": [
+                {
+                    "title": "Identificação do Público-Alvo",
+                    "summary": "Como definir e entender seu público-alvo.",
+                    "done": false,
+                    "subtopics": []
+                },
+                {
+                    "title": "Técnicas de Atendimento",
+                    "summary": "Boas práticas para um atendimento ao cliente eficaz.",
+                    "done": false,
+                    "subtopics": []
+                }
+            ]
+        },
+        {
+            "title": "Marketing e Vendas",
+            "summary": "Como promover e vender seus produtos ou serviços.",
+            "done": false,
+            "subtopics": [
+                {
+                    "title": "Estratégias de Marketing",
+                    "summary": "Táticas para promover seu negócio.",
+                    "done": false,
+                    "subtopics": []
+                },
+                {
+                    "title": "Técnicas de Vendas",
+                    "summary": "Métodos para aumentar suas vendas.",
+                    "done": false,
+                    "subtopics": []
+                }
+            ]
+        }
+    ]
+}

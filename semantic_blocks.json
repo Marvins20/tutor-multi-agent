@@ -1,0 +1,42 @@
+[
+    {
+        "content": "",
+        "block": [
+            " Me esclareça sobre [[Revolta de Canudos]]\n\n\nO que é [[Protocolo A2A do Google]]\n\nMe fale sobre [[Agente de IA]]\n\nalou\n\n\n> Me fale sobre a Guerra fria por favor aqui\n\n\n\n## Segunda Guerra mundial\n\nSobre o assunto\n\n\n#Question \n---\n\nUma pergunta da ia\n\nsua reposta \n\n#END \n---\n- [x] Próxima etapa\n\n",
+            "root",
+            "root"
+        ],
+        "change_class": "root-7",
+        "origin_file_path": "/Users/marcusabr/Documents/AI Journey/Arquivo de Teste.md",
+        "sentence_type": "Declarative",
+        "context": " Me esclareça sobre [[Revolta de Canudos]]\n\n\nO que é [[Protocolo A2A do Google]]\n\nMe fale sobre [[Agente de IA]]\n\nalou\n\n\n> Me fale sobre a Guerra fria por favor aqui\n\n\n\n## Segunda Guerra mundial\n\nSobre o assunto\n\n\n#Question \n---\n\nUma pergunta da ia\n\nsua reposta \n\n#END \n---\n- [x] Próxima etapa\n",
+        "location": [
+            7,
+            [
+                0,
+                0
+            ]
+        ],
+        "last_change": ""
+    },
+    {
+        "content": "alou",
+        "block": [
+            " Me esclareça sobre [[Revolta de Canudos]]\n\n\nO que é [[Protocolo A2A do Google]]\n\nMe fale sobre [[Agente de IA]]\n\nalou\n\n\n> Me fale sobre a Guerra fria por favor aqui\n\n\n\n## Segunda Guerra mundial\n\nSobre o assunto\n\n\n#Question \n---\n\nUma pergunta da ia\n\nsua reposta \n\n#END \n---\n- [x] Próxima etapa\n\n",
+            "root",
+            "root"
+        ],
+        "change_class": "root-8",
+        "origin_file_path": "/Users/marcusabr/Documents/AI Journey/Arquivo de Teste.md",
+        "sentence_type": "Declarative",
+        "context": " Me esclareça sobre [[Revolta de Canudos]]\n\n\nO que é [[Protocolo A2A do Google]]\n\nMe fale sobre [[Agente de IA]]\n\nalou\n\n\n> Me fale sobre a Guerra fria por favor aqui\n\n\n\n## Segunda Guerra mundial\n\nSobre o assunto\n\n\n#Question \n---\n\nUma pergunta da ia\n\nsua reposta \n\n#END \n---\n- [x] Próxima etapa\n",
+        "location": [
+            8,
+            [
+                0,
+                0
+            ]
+        ],
+        "last_change": ""
+    }
+]

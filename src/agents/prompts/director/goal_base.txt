@@ -1,0 +1,43 @@
+# Objetivo
+
+Bem vindo ao Tutor AI! Para que possamos definidir os seus objetivos é necessário responder algumas perguntas.
+
+Mas antes disso, aqui vão algumas instruções importantes para você seguir:
+
+
+## Instruções
+
+- Utilize o caracter '>' para fazer uma chamada diretamente à IA.
+- Cerque um ter com 2 colchetes para ter uma breve explicação sobre ele. Ex.: [[A Guerra dos 100 anos]]
+- Responda escrevendo x ou efetuando um clique ( em interfaces que tiverem suporte ) às perguntas feitas pelo tutor para obter feedback
+- Responda ao final do arquivo com [x] Avançar 
+
+## Plano de Estudos
+
+Responsa as perguntas a seguir para gerar o seu plano de estudos 
+
+### Qual conteúdo você quer aprender?
+
+Resposta:
+
+### Quais tópicos você já conhece sobre esse conteúdo?
+
+Resposta:
+
+### Quais tópicos tem vontade de aprender?
+
+Resposta:
+
+### Qual nívei de profundidade
+
+- [ ] Superficial
+- [ ] Intermediário
+- [ ] Profundo
+
+### Alguma observação?
+
+Resposta:
+
+## Finalizar
+
+- [ ] Gerar plano
