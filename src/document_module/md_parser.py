@@ -31,34 +31,35 @@ KEYWORDS = [
 class MarkdownParser:
     def __init__(self):
         self.contextStack = []
+        self.id_dict = {}
 
     def parse(self, plain_text):
         lines = plain_text.split("\n")
-        self.contextStack.append({"type": "root", "content": "", "line_count":0,  "children": []})
+        self.contextStack.append({"class":"root","type": "root", "content": "", "line_count":0,"line_number":0,  "children": []})
         
-        for line in lines:
-            self.match_line(line)
+        for idx, line in enumerate(lines):
+            self.match_line(line, idx+1)
         
         mdAST = {}
         while  self.contextStack:
             mdAST = self.popContext()
         return mdAST
 
-    def match_line(self, line):
+    def match_line(self, line, idx):
         # Don`t process when inside a code block
         # Code block   
         if line.strip().startswith("```"):
             if(self.contextStack[0]["type"] ==  "block_code"):
-                self.pushLineToContext({"type": "end_block_code", "content": line, "line_count":1, "children": []})
+                self.pushLineToContext({"class":"bcend", "type": "end_block_code", "content": line, "line_count":1, "line_number":idx, "children": []})
                 self.popContext()
                 return
             
-            self.pushContext( {"type": "block_code", "content": "", "line_count":0, "children": []})
-            self.pushLineToContext({"type": "start_block_code", "content": line, "line_count":1, "children": []})
+            self.pushContext( {"class":"bcode", "type": "block_code", "content": "", "line_count":0, "line_number":idx,"children": []})
+            self.pushLineToContext({"class":"bcstr", "type": "start_block_code", "content": line, "line_count":1, "line_number":idx,"children": []})
             return
 
         if(self.contextStack[0]["type"] == "block_code"):
-            self.pushLineToContext({"type": "text", "content": line, "line_count":1, "children": []})
+            self.pushLineToContext({"class":"bctxt", "type": "text", "content": line, "line_count":1, "line_number":idx,"children": []})
             return
 
         # List
@@ -66,10 +67,10 @@ class MarkdownParser:
             leading_whitespace_level = self.count_leading_whitespace(line)
             if(self.contextStack[0]["type"] != "block_list" or 
             (self.contextStack[0]["leading_whitespace_level"] < leading_whitespace_level)):
-                self.pushContext({"type": "block_list", "content": "", "leading_whitespace_level": leading_whitespace_level, "line_count": 0, "children": []})
+                self.pushContext({"class":"blist", "type": "block_list", "content": "", "leading_whitespace_level": leading_whitespace_level, "line_count": 0, "line_number":idx,"children": []})
             
             children = self.search_patterns_in_text(line)
-            self.pushLineToContext({"type": "list_item", "content": line, "line_count": 1, "children": children})
+            self.pushLineToContext({"class":"blln","type": "list_item", "content": line, "line_count": 1, "line_number":idx,"children": children})
             return
 
         # Close the context if the next element is not a block item
@@ -78,57 +79,60 @@ class MarkdownParser:
 
         # Empty line
         if line.strip() == "":
-            self.pushLineToContext({"type": "empty", "content": line, "line_count":1, "children": []})
+            self.pushLineToContext({"class":"vd", "type": "empty", "content": line, "line_count":1, "line_number":idx,"children": []})
             return
 
         # Text hightlight
         if line.strip().startswith(">"):
-            children  = self.search_patterns_in_text(line)
-            self.pushLineToContext({"type": "block_highlight", "content": line, "line_count":1, "children": children})
+            self.pushLineToContext({"class":"bimp", "type": "block_highlight", "content": line, "line_count":1, "line_number":idx,"children": []})
             return
 
         # Defined keywords for specific behaviors
         if self.line_starts_with_keyword(line.strip()):
             if(self.contextStack[0]["type"] ==  "block_keyword"):
                 self.popContext()
-            self.pushContext({"type": "block_keyword", "content": line, "line_count": 1, "children": []})
-            self.pushLineToContext({"type": "text", "content": line, "line_count": 1, "children": []})
+            self.pushContext({"class":"bkey","type": "block_keyword", "content": line, "line_count": 1, "line_number":idx,"children": []})
+            self.pushLineToContext({"class":"bkeyt", "type": "text", "content": line, "line_count": 1, "line_number":idx,"children": []})
             return
 
         # Divisors
         if line.strip().startswith("---"):
             if(self.contextStack[0]["type"] ==  "block_keyword"):
-                self.pushLineToContext({"type": "text", "content": line, "line_count": 1, "children": []})
+                self.pushLineToContext({"class":"div", "type": "text", "content": line, "line_count": 1, "line_number":idx,"children": []})
                 return
             self.popContext()
-            self.pushContext({"type": "block_division", "content": line, "line_count": 1, "children": []})
+            self.pushContext({"class":"bdiv", "type": "block_division", "content": line, "line_count": 1, "line_number":idx,"children": []})
+            self.pushLineToContext({"class":"div", "type": "text", "content": line, "line_count": 1, "line_number":idx,"children": []})
             return
 
         # Heading processing
-        if line.strip().startswith("# "):
+        if re.match(r'^(#+)\s', line.strip()):
             heading_level = len(re.match(r'^#*', line).group(0))
             while self.contextStack[0]["type"]=="heading":
                 if heading_level >= self.contextStack[0]["heading_level"]:
                     self.popContext()
                 else:
                     break
-            self.pushContext({"type": "heading", "content": line, "heading_level": heading_level, "line_count": 1,  "children": []})
-            self.pushLineToContext({"type": "text", "content": line, "line_count": 1, "children": []})
+            self.pushContext({"class":"bhead", "type": "heading", "content": line, "heading_level": heading_level, "line_count": 1,  "line_number":idx,"children": []})
+            self.pushLineToContext({"class":"bheadt", "type": "text", "content": line, "line_count": 1, "line_number":idx,"children": []})
             return 
 
         # Process regular text lines
         children = self.search_patterns_in_text(line)
-        self.pushLineToContext({"type": "text", "content": line, "line_count":1, "children": children})
+        self.pushLineToContext({"class":"tx","type": "text", "content": line, "line_count":1, "line_number":idx,"children": children})
         return
 
     def pushContext(self, element):
-        element["id"] = str(uuid.uuid4().hex[:32])
+        if self.contextStack:
+            element["class"]+=("-"+self.contextStack[0]["class"])
         self.contextStack.insert(0, element)
         return element        
 
     def pushLineToContext(self, element):
         if not self.contextStack:
-            raise Exception("Context stack is empty")        
+            raise Exception("Context stack is empty")
+
+        element["class"]+=("-"+self.contextStack[0]["class"])     
         self.contextStack[0]["children"].append(element)
         return element
 
@@ -145,7 +149,7 @@ class MarkdownParser:
         self.patterns = {
             'link': r'\[([^\]]+)\]\(([^)]+)\)',  # Matches [text](url)
             'image': r'!\[([^\]]+)\]\(([^)]+)\)',  # Matches ![alt text](url)
-            'question': r'\[\[?\s*(.*?)\s*\]\]',
+            'question': r'\[\[\s*(.*?)\s*\]\]',
             'italic': r'(\*|_)(?!\1)[^\1]+(\1)',  # Matches *text* or _text_
             'bold': r'(\*{2}|_{2})(?!\1)[^\1]+(\1)',  # Matches **text** or __text__
             'tag': r'\B#\w+\b'
@@ -162,14 +166,7 @@ class MarkdownParser:
                     "children": []
                 })
         
-        return results        
-
-        # results = []
-        # for name,pattern in self.patterns.items():
-        #     match = re.search(pattern, text)
-        #     if match:
-        #         results.append({"type": name, "content": match.group(), "line_count": 0, "children": []})
-        # return results
+        return results             
     
     def count_leading_whitespace(self, line):
         original_length = len(line)
@@ -178,3 +175,4 @@ class MarkdownParser:
 
     def line_starts_with_keyword(self, line):
         return any(line.strip().startswith(keyword) for keyword in KEYWORDS)
+    

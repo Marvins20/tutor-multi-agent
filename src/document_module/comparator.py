@@ -47,11 +47,13 @@ class Comparator():
         for line in diff:
             if line.startswith('+ '):
                 unescaped_line = line[2:]
-                if modified_lines[-1].startswith('- '):
+                if len(modified_lines) > 0 and modified_lines[-1].startswith('- '):
                     char_diff = self.get_char_diff(modified_lines[-1][2:], unescaped_line)
                     result_lines.append(LineChange(new_line_number, unescaped_line, char_diff))
+                    print(new_line_number, unescaped_line)
                 else: 
                     result_lines.append(LineChange(new_line_number, unescaped_line, []))
+                    print(new_line_number, unescaped_line)
                 new_line_number += 1
             elif line.startswith('  '):                
                 new_line_number += 1

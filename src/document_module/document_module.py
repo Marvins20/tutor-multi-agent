@@ -2,21 +2,24 @@ from ast import Tuple
 from dataclasses import dataclass
 import os
 from contextlib import ExitStack
-from comparator import Comparator, TextChange
-from md_parser import MarkdownParser 
-from md_manager import MarkdownManager
+from document_module.comparator import Comparator, TextChange
+from document_module.md_parser import MarkdownParser 
+from document_module.md_manager import MarkdownManager
 from typing import List, Tuple 
+import json
 
 @dataclass
+#TODO add the id
 class DocumentChange:
+    class_name: str
     file_path: str
     line_number: int
     content: str
     modified_text: List[TextChange]
-    affeted_subtypes: List[str]
-    block: Tuple(str, str)
+    affected_subtypes: List[str]
+    block: Tuple[str, str]
     context: str
-    
+
 
 class DocumentModule:
     # TODO turn into abstract classes
@@ -26,6 +29,11 @@ class DocumentModule:
         self.file_parser = file_parser
         self.file_manager = file_manager
         self.file_index = {}
+
+    def __new__(cls, comparator: Comparator, file_parser: MarkdownParser, file_manager: MarkdownManager):
+        if not hasattr(cls, '_instance'):
+            cls._instance = super(DocumentModule, cls).__new__(cls)
+        return cls._instance
 
     def start(self, directory_path):
         with ExitStack() as stack:
@@ -51,6 +59,8 @@ class DocumentModule:
             file = stack.enter_context(open(file_path, 'r', encoding='utf-8'))
             content = file.read()
             ast = self.parse_text(content)
+            with open("parsed_result.json", 'w', encoding='utf-8') as output_file:
+                json.dump(ast, output_file, indent=4, ensure_ascii=False)
             return (content, ast)
 
 
@@ -80,6 +90,7 @@ class DocumentModule:
             context = content
             affected_subtypes = self.extract_modified_subtypes(line.text_changes, line.line_number, ast)
             change  = DocumentChange(
+                class_name=block[2],
                 file_path=file_path,
                 line_number=line.line_number,
                 content=line.content,
@@ -101,21 +112,40 @@ class DocumentModule:
         (_, text_type_ranges) = self.file_manager.get_text_at_line(line_number, ast)
 
         intersecting_types = []
-        for (text, text_range) in text_changes:
-            for (text_type, type_range) in text_type_ranges:
-                if ranges_intersect(text_range, type_range):
-                    intersecting_types.append((text_type, type_range))
-                    break  # No need to check further if an intersection is found
+        if text_type_ranges:
+            for (text, text_range) in text_changes:
+                for (text_type, type_range) in text_type_ranges:
+                    if ranges_intersect(text_range, type_range):
+                        intersecting_types.append((text_type, type_range))
         return intersecting_types
 
 
+    def create_document_with_content(self, file_path, subject, content):
+        file_path = file_path[:-3]
+        subject = subject[2:-2]        
 
-    def answer_in_document(self, file_path, block):
-        if not file_path in self.file_index:
-            return 
-        
-        with open(file_path, 'r+', encoding='utf-8') as file:
-            lines = file.readlines()
+        file_path += "/"+subject+".md"
+        print("criando em ", file_path)
+
+        if not os.path.exists(file_path):
+            os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
+        with open(file_path, 'w', encoding='utf-8') as file:
+            file.write(content)
+        return
+
+    def answer_after_in_document(self, file_path, line, new_element):
+        content, ast = self.read_file_content(file_path)
+        new_element_ast = self.file_parser.parse(new_element)
+
+        if new_element_ast and ast:
+            result_ast = self.file_manager.append_block_after_line(line, new_element_ast, ast)
+            result_text = self.file_manager.colapse_text(result_ast)
+            # with open(file_path, 'w', encoding='utf-8') as file:
+            #     file.write(result_text)            
+        else:
+            print("Não foi possível responder")
+        return
 
 # TEST BLOCK
 

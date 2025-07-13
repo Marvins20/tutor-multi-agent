@@ -1,6 +1,5 @@
 from dataclasses import dataclass
 from enum import Enum
-from hashlib import algorithms_available
 
 class SentenceType(Enum):
     DECLARATIVE = "Declarative"
@@ -8,11 +7,14 @@ class SentenceType(Enum):
     INTERROGATIVE = "Interrogative"
     EVALUATIVE = "Exclamatory"
     ANSWER = "Answer"
+    FINISHED = "Finished"
     UNDEFINED = "Undefined"
 
 @dataclass
 class SemanticBlock:
+    change_class: str
     origin_file_path: str
+    content: str
     last_change: str
     block: str
     location: tuple[int, int]

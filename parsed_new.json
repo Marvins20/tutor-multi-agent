@@ -90,6 +90,146 @@
             ]
         },
         {
+            "class": "root",
+            "type": "root",
+            "content": "",
+            "line_count": 15,
+            "line_number": 0,
+            "children": [
+                {
+                    "class": "bkey-root-root",
+                    "type": "block_keyword",
+                    "content": "#Question",
+                    "line_count": 15,
+                    "line_number": 1,
+                    "children": [
+                        {
+                            "class": "bkeyt-bkey-root",
+                            "type": "text",
+                            "content": "#Question",
+                            "line_count": 1,
+                            "line_number": 1,
+                            "children": []
+                        },
+                        {
+                            "class": "div-bkey-root",
+                            "type": "text",
+                            "content": "-----",
+                            "line_count": 1,
+                            "line_number": 2,
+                            "children": []
+                        },
+                        {
+                            "class": "vd-bkey-root",
+                            "type": "empty",
+                            "content": "",
+                            "line_count": 1,
+                            "line_number": 3,
+                            "children": []
+                        },
+                        {
+                            "class": "tx-bkey-root",
+                            "type": "text",
+                            "content": "Exercício 1",
+                            "line_count": 1,
+                            "line_number": 4,
+                            "children": []
+                        },
+                        {
+                            "class": "vd-bkey-root",
+                            "type": "empty",
+                            "content": "",
+                            "line_count": 1,
+                            "line_number": 5,
+                            "children": []
+                        },
+                        {
+                            "class": "tx-bkey-root",
+                            "type": "text",
+                            "content": "Quem é china?",
+                            "line_count": 1,
+                            "line_number": 6,
+                            "children": []
+                        },
+                        {
+                            "class": "vd-bkey-root",
+                            "type": "empty",
+                            "content": "",
+                            "line_count": 1,
+                            "line_number": 7,
+                            "children": []
+                        },
+                        {
+                            "class": "vd-bkey-root",
+                            "type": "empty",
+                            "content": "",
+                            "line_count": 1,
+                            "line_number": 8,
+                            "children": []
+                        },
+                        {
+                            "class": "blist-bkey-root-bkey-root",
+                            "type": "block_list",
+                            "content": "",
+                            "leading_whitespace_level": 0,
+                            "line_count": 4,
+                            "line_number": 9,
+                            "children": [
+                                {
+                                    "class": "blln-blist-bkey-root",
+                                    "type": "list_item",
+                                    "content": "- [x] China pae",
+                                    "line_count": 1,
+                                    "line_number": 9,
+                                    "children": []
+                                },
+                                {
+                                    "class": "blln-blist-bkey-root",
+                                    "type": "list_item",
+                                    "content": "- [ ] Severion",
+                                    "line_count": 1,
+                                    "line_number": 10,
+                                    "children": []
+                                },
+                                {
+                                    "class": "blln-blist-bkey-root",
+                                    "type": "list_item",
+                                    "content": "- [ ] Cabrunca",
+                                    "line_count": 1,
+                                    "line_number": 11,
+                                    "children": []
+                                },
+                                {
+                                    "class": "blln-blist-bkey-root",
+                                    "type": "list_item",
+                                    "content": "- [ ] sepa",
+                                    "line_count": 1,
+                                    "line_number": 12,
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "class": "vd-bkey-root",
+                            "type": "empty",
+                            "content": "",
+                            "line_count": 1,
+                            "line_number": 13,
+                            "children": []
+                        },
+                        {
+                            "class": "vd-bkey-root",
+                            "type": "empty",
+                            "content": "",
+                            "line_count": 1,
+                            "line_number": 14,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "class": "bhead-root-root",
             "type": "heading",
             "content": "## teste 2",

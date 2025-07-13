@@ -2,8 +2,6 @@ from inspect import signature
 from time import time
 from threading import Timer
 
-#TODO move to utils
-
 def filter_files(extensions_to_filter=[], filterDirectory=False):
     def decorator(func):
         def wrapper(*args, **kwargs):

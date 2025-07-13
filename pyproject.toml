@@ -1,0 +1,16 @@
+[project]
+name = "tutor-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp>=3.12.14",
+    "dotenv>=0.9.9",
+    "markdown>=3.8.2",
+    "mcp[cli]>=1.11.0",
+    "openai>=1.95.1",
+    "pydantic>=2.11.7",
+    "ratelimit>=2.2.1",
+    "watchdog>=6.0.0",
+]
