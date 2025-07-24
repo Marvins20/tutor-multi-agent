@@ -1,4 +1,5 @@
 
+import hashlib
 from watchdog.observers import Observer
 import time
 import asyncio
@@ -11,6 +12,7 @@ from document_module.md_manager import MarkdownManager
 
 from agents.director_agent import DirectorAgent
 
+from logger import Logger
 from trigger import FolderEventTrigger
 
 path = "/Users/marcusabr/Documents/AI Journey"
@@ -24,8 +26,12 @@ async def main():
     
     observer = Observer()
     observer.schedule(event_handler, path, recursive=True)
-
+# 
     print(f"Starting folder monitoring on: {path}")
+    # Create a unique ID based on the hash of the monitored path
+    logger_id = hashlib.md5(path.encode()).hexdigest()
+    logger =  Logger(logger_id)
+
     observer.start()
 
     director_agent = DirectorAgent(folder_to_monitor, environment_queue)

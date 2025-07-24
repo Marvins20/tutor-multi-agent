@@ -25,8 +25,9 @@ SUBTYPE_ITEMS = [
 ]
 
 KEYWORDS = [
-    "#Question",
-    "#Evaluation"
+    "#EVAL",
+    "#QST",
+    "#NXT"
 ]
 
 class MarkdownParser:

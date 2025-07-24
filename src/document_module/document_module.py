@@ -120,8 +120,8 @@ class DocumentModule:
 
 
     def create_document_with_content(self, file_path, subject, content):
-        file_path = file_path[:-3]
-        subject = subject[2:-2]        
+        file_path = file_path.replace(".md", "")
+        subject = subject.replace("[", "").replace("]", "")
 
         file_path += "/"+subject+".md"
         print("criando em ", file_path)
@@ -140,8 +140,8 @@ class DocumentModule:
         if new_element_ast and ast:
             result_ast = self.file_manager.insert_after_block(line, new_element_ast, ast)
             result_text = self.file_manager.colapse_text(result_ast)
-            # with open(file_path, 'w', encoding='utf-8') as file:
-            #     file.write(result_text)            
+            with open(file_path, 'w', encoding='utf-8') as file:
+                file.write(result_text)            
         else:
             print("Não foi possível responder")
         return

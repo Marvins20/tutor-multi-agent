@@ -9,6 +9,7 @@ from document_module.comparator import Comparator
 from document_module.document_module import DocumentModule
 from document_module.md_manager import MarkdownManager
 from document_module.md_parser import MarkdownParser
+from utils.decorators import log_time_elapsed
 
 mcp = FastMCP("professor")
 load_dotenv()
@@ -36,7 +37,7 @@ def _format_prompt(template, **kwargs):
     return template.format(**kwargs)
 
 @mcp.tool()
-async def next_step(title, summary, context: str, topic: str):
+async def next_step(topic, summary, number , context, file_path):
     """Given a question or order, provide a short and direct answer for the user.
         async def researchTopic(context: str, topic: str, profile: str = "{}"):
     Args:
@@ -52,17 +53,24 @@ async def next_step(title, summary, context: str, topic: str):
     try:
         prompt_template = _read_prompt("new_step")
 
+        context = "Ordem do Plano: ".join(context)
+
         formatted_prompt = _format_prompt(
-            prompt_template,
-            topic,
-            summary,
+            template=prompt_template,
+            context=context,
+            topic=topic,
+            summary=summary
         )
 
-        answer = safe_make_decision(formatted_prompt)
+        no_prompt = topic+summary
+
+        answer = await safe_make_decision(formatted_prompt, no_prompt)
         
-        await document_module.create_document_with_content(file_path, topic, answer)
+        file_path = os.path.join(file_path, f"{topic}.md")
+        print(file_path)
+        document_module.create_document_with_content(file_path, topic, answer)
     except Exception as e:
-        log(0, f"**Error**: Unable to process your request. Please try again. ({str(e)})")
+        print(f"**Error**: Unable to process your request. Please try again. ({str(e)})")
         return 
 
 
@@ -89,7 +97,10 @@ async def answer_user(file_path:str, location:int, context: str, user_input: str
             context=context,
             user_input=user_input
         )
-        answer = safe_make_decision(formatted_prompt)
+        no_prompt = context+user_input
+        answer = safe_make_decision(formatted_prompt, no_prompt)
+
+        
 
         await document_module.answer_after_in_document(file_path, location, ("#Tutor: "+answer))
 
@@ -121,7 +132,8 @@ async def research_topic(file_path: str, context: str, topic: str):
             topic=topic
         )
 
-        answer = safe_make_decision(formatted_prompt)
+        noprompt = topic+context
+        answer = safe_make_decision(formatted_prompt, noprompt)
         
         await document_module.create_document_with_content(file_path, topic, answer)
     except Exception as e:

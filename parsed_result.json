@@ -2,25 +2,16 @@
     "class": "root",
     "type": "root",
     "content": "",
-    "line_count": 30,
+    "line_count": 11,
     "line_number": 0,
     "children": [
         {
             "class": "tx-root",
             "type": "text",
-            "content": " Me esclareça sobre [[Revolta de Canudos]]",
+            "content": "As a professor, a new step in my academic journey could be anything from publishing a new research paper, beginning a new research project, starting a new course, or even starting a new job at a different university. ",
             "line_count": 1,
             "line_number": 1,
-            "children": [
-                {
-                    "type": "question",
-                    "content": "[[Revolta de Canudos]]",
-                    "start": 20,
-                    "end": 42,
-                    "line_count": 0,
-                    "children": []
-                }
-            ]
+            "children": []
         },
         {
             "class": "vd-root",
@@ -31,75 +22,57 @@
             "children": []
         },
         {
-            "class": "vd-root",
-            "type": "empty",
-            "content": "",
+            "class": "tx-root",
+            "type": "text",
+            "content": "For instance, if I were to publish a new research paper, the prompt could look like this:",
             "line_count": 1,
             "line_number": 3,
             "children": []
         },
         {
-            "class": "tx-root",
-            "type": "text",
-            "content": "O que é [[Protocolo A2A do Google]]",
-            "line_count": 1,
-            "line_number": 4,
-            "children": [
-                {
-                    "type": "question",
-                    "content": "[[Protocolo A2A do Google]]",
-                    "start": 8,
-                    "end": 35,
-                    "line_count": 0,
-                    "children": []
-                }
-            ]
-        },
-        {
             "class": "vd-root",
             "type": "empty",
             "content": "",
+            "line_count": 1,
+            "line_number": 4,
+            "children": []
+        },
+        {
+            "class": "tx-root",
+            "type": "text",
+            "content": "\"Professor [Your Name], congratulations on publishing your recent research paper on [Topic]. Could you share more about your findings and their implications in the field of [Subject]?\"",
             "line_count": 1,
             "line_number": 5,
             "children": []
         },
         {
-            "class": "tx-root",
-            "type": "text",
-            "content": "Me fale sobre [[Agente de IA]]",
-            "line_count": 1,
-            "line_number": 6,
-            "children": [
-                {
-                    "type": "question",
-                    "content": "[[Agente de IA]]",
-                    "start": 14,
-                    "end": 30,
-                    "line_count": 0,
-                    "children": []
-                }
-            ]
-        },
-        {
             "class": "vd-root",
             "type": "empty",
             "content": "",
+            "line_count": 1,
+            "line_number": 6,
+            "children": []
+        },
+        {
+            "class": "tx-root",
+            "type": "text",
+            "content": "Or if I were to start a new course:",
             "line_count": 1,
             "line_number": 7,
             "children": []
         },
         {
-            "class": "tx-root",
-            "type": "text",
-            "content": "alou",
+            "class": "vd-root",
+            "type": "empty",
+            "content": "",
             "line_count": 1,
             "line_number": 8,
             "children": []
         },
         {
-            "class": "vd-root",
-            "type": "empty",
-            "content": "",
+            "class": "tx-root",
+            "type": "text",
+            "content": "\"Professor [Your Name], we heard you're starting a new course on [Course Topic]. Could you tell us more about what students can expect to learn from this course, and why it's an important addition to the curriculum?\"",
             "line_count": 1,
             "line_number": 9,
             "children": []
@@ -113,211 +86,12 @@
             "children": []
         },
         {
-            "class": "bimp-root",
-            "type": "block_highlight",
-            "content": "> Me fale sobre a Guerra fria por favor aqui",
+            "class": "tx-root",
+            "type": "text",
+            "content": "These prompts give me an opportunity to elaborate on my work and its significance, which can help me engage more effectively with my audience, whether they're students, colleagues, or the wider public.",
             "line_count": 1,
             "line_number": 11,
-            "children": [
-                {
-                    "class": "bimpt",
-                    "type": "text",
-                    "content": "> Me fale sobre a Guerra fria por favor aqui",
-                    "line_count": 1,
-                    "line_number": 11,
-                    "children": []
-                }
-            ]
-        },
-        {
-            "class": "vd-root",
-            "type": "empty",
-            "content": "",
-            "line_count": 1,
-            "line_number": 12,
             "children": []
-        },
-        {
-            "class": "vd-root",
-            "type": "empty",
-            "content": "",
-            "line_count": 1,
-            "line_number": 13,
-            "children": []
-        },
-        {
-            "class": "vd-root",
-            "type": "empty",
-            "content": "",
-            "line_count": 1,
-            "line_number": 14,
-            "children": []
-        },
-        {
-            "class": "bhead-root-root",
-            "type": "heading",
-            "content": "## Segunda Guerra mundial",
-            "heading_level": 2,
-            "line_count": 16,
-            "line_number": 15,
-            "children": [
-                {
-                    "class": "bheadt-bhead-root",
-                    "type": "text",
-                    "content": "## Segunda Guerra mundial",
-                    "line_count": 1,
-                    "line_number": 15,
-                    "children": []
-                },
-                {
-                    "class": "vd-bhead-root",
-                    "type": "empty",
-                    "content": "",
-                    "line_count": 1,
-                    "line_number": 16,
-                    "children": []
-                },
-                {
-                    "class": "tx-bhead-root",
-                    "type": "text",
-                    "content": "Sobre o assunto",
-                    "line_count": 1,
-                    "line_number": 17,
-                    "children": []
-                },
-                {
-                    "class": "vd-bhead-root",
-                    "type": "empty",
-                    "content": "",
-                    "line_count": 1,
-                    "line_number": 18,
-                    "children": []
-                },
-                {
-                    "class": "vd-bhead-root",
-                    "type": "empty",
-                    "content": "",
-                    "line_count": 1,
-                    "line_number": 19,
-                    "children": []
-                },
-                {
-                    "class": "bkey-bhead-root-bhead-root",
-                    "type": "block_keyword",
-                    "content": "#Question ",
-                    "line_count": 11,
-                    "line_number": 20,
-                    "children": [
-                        {
-                            "class": "bkeyt-bkey-bhead-root",
-                            "type": "text",
-                            "content": "#Question ",
-                            "line_count": 1,
-                            "line_number": 20,
-                            "children": []
-                        },
-                        {
-                            "class": "div-bkey-bhead-root",
-                            "type": "text",
-                            "content": "---",
-                            "line_count": 1,
-                            "line_number": 21,
-                            "children": []
-                        },
-                        {
-                            "class": "vd-bkey-bhead-root",
-                            "type": "empty",
-                            "content": "",
-                            "line_count": 1,
-                            "line_number": 22,
-                            "children": []
-                        },
-                        {
-                            "class": "tx-bkey-bhead-root",
-                            "type": "text",
-                            "content": "Uma pergunta da ia",
-                            "line_count": 1,
-                            "line_number": 23,
-                            "children": []
-                        },
-                        {
-                            "class": "vd-bkey-bhead-root",
-                            "type": "empty",
-                            "content": "",
-                            "line_count": 1,
-                            "line_number": 24,
-                            "children": []
-                        },
-                        {
-                            "class": "tx-bkey-bhead-root",
-                            "type": "text",
-                            "content": "sua reposta ",
-                            "line_count": 1,
-                            "line_number": 25,
-                            "children": []
-                        },
-                        {
-                            "class": "vd-bkey-bhead-root",
-                            "type": "empty",
-                            "content": "",
-                            "line_count": 1,
-                            "line_number": 26,
-                            "children": []
-                        },
-                        {
-                            "class": "tx-bkey-bhead-root",
-                            "type": "text",
-                            "content": "#END ",
-                            "line_count": 1,
-                            "line_number": 27,
-                            "children": [
-                                {
-                                    "type": "tag",
-                                    "content": "#END",
-                                    "start": 0,
-                                    "end": 4,
-                                    "line_count": 0,
-                                    "children": []
-                                }
-                            ]
-                        },
-                        {
-                            "class": "div-bkey-bhead-root",
-                            "type": "text",
-                            "content": "---",
-                            "line_count": 1,
-                            "line_number": 28,
-                            "children": []
-                        },
-                        {
-                            "class": "blist-bkey-bhead-root-bkey-bhead-root",
-                            "type": "block_list",
-                            "content": "",
-                            "leading_whitespace_level": 0,
-                            "line_count": 1,
-                            "line_number": 29,
-                            "children": [
-                                {
-                                    "class": "blln-blist-bkey-bhead-root",
-                                    "type": "list_item",
-                                    "content": "- [x] Próxima etapa",
-                                    "line_count": 1,
-                                    "line_number": 29,
-                                    "children": []
-                                }
-                            ]
-                        },
-                        {
-                            "class": "vd-bkey-bhead-root",
-                            "type": "empty",
-                            "content": "",
-                            "line_count": 1,
-                            "line_number": 30,
-                            "children": []
-                        }
-                    ]
-                }
-            ]
         }
     ]
 }

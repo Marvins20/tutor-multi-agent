@@ -5,6 +5,7 @@ import os
 from mcp.server.fastmcp import FastMCP
 from decide import safe_make_structured_decision
 from env_context_queue import EnvironmentContextQueue
+from logger import Logger
 from mtypes.semantic_block import SemanticBlock, SentenceType
 from mtypes.goal_steps import GoalStep
 from mcp import ClientSession, StdioServerParameters
@@ -36,13 +37,20 @@ class DirectorAgent(Agent):
         self.tracker_file = self.path + "/.tutorai/step_tracker.json"
         self.exit_stack = AsyncExitStack()
         self.messages = []
+        self.logger = Logger("")
 
     def start(self):
         goal_base_path = "agents/prompts/director/goal_base.txt"
-        goal_base = read_relative_file_content(goal_base_path)      
+        goal_base = read_relative_file_content(goal_base_path)
+             
 
         if not os.path.exists(self.goal_file):
             create_file_within_dir(self.goal_file, goal_base)
+        
+        if  os.path.exists(self.tracker_file):
+            self.get_next_step() 
+            current_step = self.get_next_step()
+            self.logger.set_group(current_step[2])
 
     async def update(self):
         if not self.context_queue.is_empty():
@@ -64,7 +72,7 @@ class DirectorAgent(Agent):
                 interaction.last_change,
                 )
         elif interaction.sentence_type == SentenceType.FINISHED:
-            await self.create_next_document()
+            await self.create_next_document(self.path)
 
         return
 
@@ -83,9 +91,7 @@ class DirectorAgent(Agent):
         goal = template.format(user_goal=user_goal, old_user_goal=old_user_goal)
         
         try:
-            print(template)
-            
-            goal_plan = await safe_make_structured_decision(goal, GoalStep)
+            goal_plan = await safe_make_structured_decision(goal, GoalStep, user_goal)
 
             plan_dict = goal_plan.model_dump() if hasattr(goal_plan, 'model_dump') else goal_plan.to_dict()
 
@@ -96,44 +102,41 @@ class DirectorAgent(Agent):
 
         return
 
-    async def create_next_document(self):
+    async def create_next_document(self, file_path):
         next_step = self.get_next_step()
-        await professor_agent.next_step(next_step[0], next_step[1])
+        self.logger.set_group(next_step[2])
+        print(next_step)
+        await professor_agent.next_step(next_step[0], next_step[1], next_step[2], next_step[3], file_path)
         self.complete_next_step()
 
     def get_next_step(self):
-        """
-        Reads the goal tracker file, finds the first incomplete step,
-        and returns its title and summary.
-        """
-        def dfs_find_first_incomplete(step: GoalStep) -> Tuple[str, str] | None:
-            """
-            Recursively traverses the GoalStep tree to find the first step
-            that is not marked as 'done'.
-            Returns the title and summary of that step.
-            """
+        def dfs_find_first_incomplete(step: GoalStep, step_number:str, step_context) -> Tuple[str, str] | None:
+            step_context += [step.title]
             if not step.done:
-                return step.title, step.summary
+                return step.title, step.summary, step_number, step_context
             
-            for subtopic in step.subtopics:
-                result = dfs_find_first_incomplete(subtopic)
+            if step_number:
+                step_number += '.'
+
+            for idx,subtopic in enumerate(step.subtopics, 1):
+                result = dfs_find_first_incomplete(subtopic, step_number+str(idx), step_context)
                 if result:
                     return result
             
             return None
-
+            
         try:
             goal_tree_dict = read_json_file_to_dict(self.tracker_file)
             if not goal_tree_dict:
                 return None, "Tracker file is empty", "Please create a goal first"
-
             goal_tree_model = GoalStep.model_validate(goal_tree_dict)
+            
         except FileNotFoundError:
             return None, "No goal tracker file found", "Please create a goal first"
         except Exception as ex:
             return None, f"Error reading tracker file: {ex}", "Please check the tracker file format"    
         
-        result = dfs_find_first_incomplete(goal_tree_model)
+        result = dfs_find_first_incomplete(goal_tree_model, "", [])
         
         if result:
             return result

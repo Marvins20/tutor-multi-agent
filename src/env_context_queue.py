@@ -45,7 +45,7 @@ class EnvironmentContextQueue:
 
     def pop_interaction(self) -> Optional[SemanticBlock]:
         self.refine_interaction_queue()
-        return self.interaction_queue.pop() if self.interaction_queue else None
+        return self.interaction_queue.pop(0) if self.interaction_queue else None
 
     def extract_block_with_type(self, interaction:DocumentChange):
         last_change = self.block_line_changes(interaction.line_number,interaction.modified_text)
@@ -55,13 +55,13 @@ class EnvironmentContextQueue:
         if interaction.block[1] == "block_highlight":
             sentence_type = SentenceType.IMPERATIVE
 
-        elif "block_keyword" == interaction.block[1] and interaction.content.strip().startswith("#Evaluation"):
+        elif "block_keyword" == interaction.block[1] and interaction.block[0].strip().startswith("#EVAL"):
             sentence_type = SentenceType.EVALUATIVE
 
-        elif "block_keyword" == interaction.block[1] and interaction.content.strip().startswith("#Question"):
+        elif "block_keyword" == interaction.block[1] and interaction.block[0].strip().startswith("#QST"):
             sentence_type = SentenceType.ANSWER
 
-        elif "block_keyword"in interaction.block[1] and interaction.content.startswith("#END"):
+        elif "block_keyword" in interaction.block[1] and interaction.block[0].strip().startswith("#NXT"):
             sentence_type = SentenceType.FINISHED
         else:
             sentence_type = SentenceType.DECLARATIVE
@@ -78,12 +78,6 @@ class EnvironmentContextQueue:
             )
 
     def refine_interaction_queue(self):
-        # TODO for the line it is considered only the last change
-        # TODO for Block, check if it is the same, and if it is, append to the text of the changes
-        # TODO what about the specific changes in the line?
-
-        #  detectar sobreposicoes, ter um id pra cada parte, e dizer se é repetido?
-            #it should check if the file already exits
         pass
 
     def block_line_changes(self, line_number:int, changes: List[Tuple[str, Tuple[int, int]]]):

@@ -1,9 +1,12 @@
 import os
+import time
 from openai import OpenAI
 from dotenv import load_dotenv
 from pydantic import BaseModel
 from ratelimit import limits, RateLimitException
 import json
+
+from logger import Logger
 
 ONE_MINUTE=60
 
@@ -13,6 +16,8 @@ load_dotenv()
 client = OpenAI(
     api_key=os.environ.get("OPENAI_API_KEY"),
 )
+
+logger = Logger("")
 
 
 @limits(calls=1, period=ONE_MINUTE)
@@ -33,9 +38,14 @@ async def _make_decision(message, model, temperature) -> str:
         print(0, f"**Error**: Unable to process your request. Please try again. ({str(e)})")
         return ""
 
-async def safe_make_decision(message, model="gpt-4", temperature=0.7) -> str:
+async def safe_make_decision(message,noprompt, model="gpt-4", temperature=0.7) -> str:
     try:
-        return await _make_decision(message, model, temperature)
+        start_time = time.time()
+        decision = await _make_decision(message, model, temperature)
+        end_time = time.time()
+        duration = end_time - start_time
+        logger.log_token_and_time_usage(message, noprompt, duration)
+        return decision 
     except RateLimitException:
         print("Rate limit exceeded. Ignoring the call.")
         return ""
@@ -45,6 +55,8 @@ async def safe_make_decision(message, model="gpt-4", temperature=0.7) -> str:
 
 @limits(calls=1, period=ONE_MINUTE)
 async def _make_structured_decision(message, structure_model, model, temperature) -> str:
+    
+    
     try:
 
         response = client.responses.parse(
@@ -55,15 +67,22 @@ async def _make_structured_decision(message, structure_model, model, temperature
             ],
             text_format=structure_model,
         )
+        
+
         return response.output_parsed
     except Exception as e:
         print(0, f"**Error**: Unable to process your request. Please try again. ({str(e)})")
         return ""
 
 
-async def safe_make_structured_decision(message, structure_model, model="gpt-4o-2024-08-06", temperature=0.3) -> str:
+async def safe_make_structured_decision(message, structure_model, noprompt, model="gpt-4o-2024-08-06", temperature=0.3) -> str:
     try:
-        return await _make_structured_decision(message,structure_model, model, temperature)
+        start_time = time.time()
+        decision = await _make_structured_decision(message,structure_model, model, temperature)
+        end_time = time.time()
+        duration = end_time - start_time
+        logger.log_token_and_time_usage(message, noprompt, duration)
+        return decision
 
     except RateLimitException:
         print("Rate limit exceeded. Ignoring the call.")
