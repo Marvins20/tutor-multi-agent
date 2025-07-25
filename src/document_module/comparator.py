@@ -2,21 +2,8 @@
 from dataclasses import dataclass
 from typing import List, Tuple
 import difflib
-from typing_extensions import TypeAlias
 
-Location: TypeAlias = Tuple[int, int]
-
-@dataclass
-class TextChange:
-    text: str
-    location: Location
-
-@dataclass
-class LineChange:
-    line_number: int
-    content: str
-    text_changes: List[TextChange]
-
+from mtypes.changes import LineChange, TextChange
 
 class Comparator():
     def __init__(self):

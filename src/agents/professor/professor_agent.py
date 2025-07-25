@@ -9,7 +9,8 @@ from document_module.comparator import Comparator
 from document_module.document_module import DocumentModule
 from document_module.md_manager import MarkdownManager
 from document_module.md_parser import MarkdownParser
-from utils.decorators import log_time_elapsed
+from logger import Logger
+from utils.file_interaction import read_relative_file_content
 
 mcp = FastMCP("professor")
 load_dotenv()
@@ -22,13 +23,14 @@ client = OpenAI(
 
 document_module = DocumentModule(Comparator,MarkdownParser, MarkdownManager)
 
+logger = Logger()
+
 def _read_prompt(prompt_name):
     """Read prompt template for a specific function"""
-    prompt_path = f"prompts/professor/{prompt_name}.txt"
+    prompt_path = f"agents/professor/prompts/{prompt_name}.txt"
 
     try:
-        with open(prompt_path, 'r', encoding='utf-8') as file:
-            return file.read()
+        return read_relative_file_content(prompt_path)
     except FileNotFoundError:
         return f"Prompt file not found for {prompt_path}"
 
@@ -53,7 +55,7 @@ async def next_step(topic, summary, number , context, file_path):
     try:
         prompt_template = _read_prompt("new_step")
 
-        context = "Ordem do Plano: ".join(context)
+        context = "Ordem do plano"+ " -> ".join(context)
 
         formatted_prompt = _format_prompt(
             template=prompt_template,
@@ -64,10 +66,11 @@ async def next_step(topic, summary, number , context, file_path):
 
         no_prompt = topic+summary
 
+        print(formatted_prompt)
         answer = await safe_make_decision(formatted_prompt, no_prompt)
-        
+
+        answer += "#NXT\n---\n\n- [ ] Próxima etapa\n"
         file_path = os.path.join(file_path, f"{topic}.md")
-        print(file_path)
         document_module.create_document_with_content(file_path, topic, answer)
     except Exception as e:
         print(f"**Error**: Unable to process your request. Please try again. ({str(e)})")
@@ -133,7 +136,7 @@ async def research_topic(file_path: str, context: str, topic: str):
         )
 
         noprompt = topic+context
-        answer = safe_make_decision(formatted_prompt, noprompt)
+        answer = await safe_make_decision(formatted_prompt, noprompt)
         
         await document_module.create_document_with_content(file_path, topic, answer)
     except Exception as e:

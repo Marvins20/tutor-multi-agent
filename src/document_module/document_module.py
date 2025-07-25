@@ -8,20 +8,9 @@ from document_module.md_manager import MarkdownManager
 from typing import List, Tuple 
 import json
 
-@dataclass
-class DocumentChange:
-    class_name: str
-    file_path: str
-    line_number: int
-    content: str
-    modified_text: List[TextChange]
-    affected_subtypes: List[str]
-    block: Tuple[str, str]
-    context: str
-
+from mtypes.document_change import DocumentChange
 
 class DocumentModule:
-    # TODO turn into abstract classes
     def __init__(self, comparator: Comparator, file_parser: MarkdownParser, file_manager: MarkdownManager):
         super().__init__()
         self.comparator = comparator

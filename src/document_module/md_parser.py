@@ -135,7 +135,7 @@ class MarkdownParser:
         if not self.contextStack:
             raise Exception("Context stack is empty")
 
-        element["class"]+=("-"+self.contextStack[0]["class"])     
+        element["class"]+=str(len(self.contextStack))+("-"+self.contextStack[0]["class"])     
         self.contextStack[0]["children"].append(element)
         return element
 

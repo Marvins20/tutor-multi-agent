@@ -4,13 +4,14 @@ from watchdog.observers import Observer
 import time
 import asyncio
 
+from agents.director.step_manager import StepManager
 from env_context_queue import EnvironmentContextQueue
 from document_module.document_module import DocumentModule
 from document_module.comparator import Comparator
 from document_module.md_parser import MarkdownParser
 from document_module.md_manager import MarkdownManager
 
-from agents.director_agent import DirectorAgent
+from agents.director.director_agent import DirectorAgent
 
 from logger import Logger
 from trigger import FolderEventTrigger
@@ -30,11 +31,12 @@ async def main():
     print(f"Starting folder monitoring on: {path}")
     # Create a unique ID based on the hash of the monitored path
     logger_id = hashlib.md5(path.encode()).hexdigest()
-    logger =  Logger(logger_id)
+    logger =  Logger()
+    logger.set_id(logger_id)
 
     observer.start()
 
-    director_agent = DirectorAgent(folder_to_monitor, environment_queue)
+    director_agent = DirectorAgent(folder_to_monitor, environment_queue, StepManager(path))
     director_agent.start()
     
     try:

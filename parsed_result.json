@@ -2,96 +2,294 @@
     "class": "root",
     "type": "root",
     "content": "",
-    "line_count": 11,
+    "line_count": 27,
     "line_number": 0,
     "children": [
         {
-            "class": "tx-root",
-            "type": "text",
-            "content": "As a professor, a new step in my academic journey could be anything from publishing a new research paper, beginning a new research project, starting a new course, or even starting a new job at a different university. ",
-            "line_count": 1,
+            "class": "bhead-root1-root",
+            "type": "heading",
+            "content": "# Aplicações dos Transformers",
+            "heading_level": 1,
+            "line_count": 4,
             "line_number": 1,
-            "children": []
+            "children": [
+                {
+                    "class": "bheadt2-bhead-root",
+                    "type": "text",
+                    "content": "# Aplicações dos Transformers",
+                    "line_count": 1,
+                    "line_number": 1,
+                    "children": []
+                },
+                {
+                    "class": "vd2-bhead-root",
+                    "type": "empty",
+                    "content": "",
+                    "line_count": 1,
+                    "line_number": 2,
+                    "children": []
+                },
+                {
+                    "class": "tx2-bhead-root",
+                    "type": "text",
+                    "content": "Os Transformers são um modelo de aprendizado de máquina que revolucionou o campo da Inteligência Artificial (IA), particularmente o processamento de linguagem natural (NLP). Esta seção abordará as principais aplicações dos Transformers.",
+                    "line_count": 1,
+                    "line_number": 3,
+                    "children": []
+                },
+                {
+                    "class": "vd2-bhead-root",
+                    "type": "empty",
+                    "content": "",
+                    "line_count": 1,
+                    "line_number": 4,
+                    "children": []
+                }
+            ]
         },
         {
-            "class": "vd-root",
-            "type": "empty",
-            "content": "",
-            "line_count": 1,
-            "line_number": 2,
-            "children": []
-        },
-        {
-            "class": "tx-root",
-            "type": "text",
-            "content": "For instance, if I were to publish a new research paper, the prompt could look like this:",
-            "line_count": 1,
-            "line_number": 3,
-            "children": []
-        },
-        {
-            "class": "vd-root",
-            "type": "empty",
-            "content": "",
-            "line_count": 1,
-            "line_number": 4,
-            "children": []
-        },
-        {
-            "class": "tx-root",
-            "type": "text",
-            "content": "\"Professor [Your Name], congratulations on publishing your recent research paper on [Topic]. Could you share more about your findings and their implications in the field of [Subject]?\"",
-            "line_count": 1,
+            "class": "bhead-root1-root",
+            "type": "heading",
+            "content": "## Tradução automática",
+            "heading_level": 2,
+            "line_count": 4,
             "line_number": 5,
-            "children": []
+            "children": [
+                {
+                    "class": "bheadt2-bhead-root",
+                    "type": "text",
+                    "content": "## Tradução automática",
+                    "line_count": 1,
+                    "line_number": 5,
+                    "children": []
+                },
+                {
+                    "class": "vd2-bhead-root",
+                    "type": "empty",
+                    "content": "",
+                    "line_count": 1,
+                    "line_number": 6,
+                    "children": []
+                },
+                {
+                    "class": "tx2-bhead-root",
+                    "type": "text",
+                    "content": "Uma das aplicações mais conhecidas dos Transformers é a tradução automática. O Google, por exemplo, utiliza os Transformers em seu serviço de tradução, o Google Translate. Os Transformers conseguem capturar a semântica e a sintaxe das palavras e das frases, permitindo que sejam traduzidas para outras línguas de forma mais precisa e natural.",
+                    "line_count": 1,
+                    "line_number": 7,
+                    "children": []
+                },
+                {
+                    "class": "vd2-bhead-root",
+                    "type": "empty",
+                    "content": "",
+                    "line_count": 1,
+                    "line_number": 8,
+                    "children": []
+                }
+            ]
         },
         {
-            "class": "vd-root",
-            "type": "empty",
-            "content": "",
-            "line_count": 1,
-            "line_number": 6,
-            "children": []
-        },
-        {
-            "class": "tx-root",
-            "type": "text",
-            "content": "Or if I were to start a new course:",
-            "line_count": 1,
-            "line_number": 7,
-            "children": []
-        },
-        {
-            "class": "vd-root",
-            "type": "empty",
-            "content": "",
-            "line_count": 1,
-            "line_number": 8,
-            "children": []
-        },
-        {
-            "class": "tx-root",
-            "type": "text",
-            "content": "\"Professor [Your Name], we heard you're starting a new course on [Course Topic]. Could you tell us more about what students can expect to learn from this course, and why it's an important addition to the curriculum?\"",
-            "line_count": 1,
+            "class": "bhead-root1-root",
+            "type": "heading",
+            "content": "## Sumarização automática de texto",
+            "heading_level": 2,
+            "line_count": 4,
             "line_number": 9,
-            "children": []
+            "children": [
+                {
+                    "class": "bheadt2-bhead-root",
+                    "type": "text",
+                    "content": "## Sumarização automática de texto",
+                    "line_count": 1,
+                    "line_number": 9,
+                    "children": []
+                },
+                {
+                    "class": "vd2-bhead-root",
+                    "type": "empty",
+                    "content": "",
+                    "line_count": 1,
+                    "line_number": 10,
+                    "children": []
+                },
+                {
+                    "class": "tx2-bhead-root",
+                    "type": "text",
+                    "content": "Os Transformers também podem ser usados para sumarizar textos de forma automática. Isso é especialmente útil para lidar com grandes volumes de texto, como artigos, relatórios ou livros. O modelo Transformer é capaz de entender o conteúdo do texto e produzir um resumo conciso que captura os principais pontos.",
+                    "line_count": 1,
+                    "line_number": 11,
+                    "children": []
+                },
+                {
+                    "class": "vd2-bhead-root",
+                    "type": "empty",
+                    "content": "",
+                    "line_count": 1,
+                    "line_number": 12,
+                    "children": []
+                }
+            ]
         },
         {
-            "class": "vd-root",
-            "type": "empty",
-            "content": "",
-            "line_count": 1,
-            "line_number": 10,
-            "children": []
+            "class": "bhead-root1-root",
+            "type": "heading",
+            "content": "## Geração de texto",
+            "heading_level": 2,
+            "line_count": 4,
+            "line_number": 13,
+            "children": [
+                {
+                    "class": "bheadt2-bhead-root",
+                    "type": "text",
+                    "content": "## Geração de texto",
+                    "line_count": 1,
+                    "line_number": 13,
+                    "children": []
+                },
+                {
+                    "class": "vd2-bhead-root",
+                    "type": "empty",
+                    "content": "",
+                    "line_count": 1,
+                    "line_number": 14,
+                    "children": []
+                },
+                {
+                    "class": "tx2-bhead-root",
+                    "type": "text",
+                    "content": "Outra aplicação importante dos Transformers é a geração de texto. Isso pode ser usado em uma variedade de casos de uso, desde a criação de respostas automáticas em chatbots até a escrita de artigos inteiros. Os Transformers são capazes de gerar texto que é notavelmente coerente e gramaticalmente correto.",
+                    "line_count": 1,
+                    "line_number": 15,
+                    "children": []
+                },
+                {
+                    "class": "vd2-bhead-root",
+                    "type": "empty",
+                    "content": "",
+                    "line_count": 1,
+                    "line_number": 16,
+                    "children": []
+                }
+            ]
         },
         {
-            "class": "tx-root",
-            "type": "text",
-            "content": "These prompts give me an opportunity to elaborate on my work and its significance, which can help me engage more effectively with my audience, whether they're students, colleagues, or the wider public.",
-            "line_count": 1,
-            "line_number": 11,
-            "children": []
+            "class": "bhead-root1-root",
+            "type": "heading",
+            "content": "## Reconhecimento de voz",
+            "heading_level": 2,
+            "line_count": 4,
+            "line_number": 17,
+            "children": [
+                {
+                    "class": "bheadt2-bhead-root",
+                    "type": "text",
+                    "content": "## Reconhecimento de voz",
+                    "line_count": 1,
+                    "line_number": 17,
+                    "children": []
+                },
+                {
+                    "class": "vd2-bhead-root",
+                    "type": "empty",
+                    "content": "",
+                    "line_count": 1,
+                    "line_number": 18,
+                    "children": []
+                },
+                {
+                    "class": "tx2-bhead-root",
+                    "type": "text",
+                    "content": "Os Transformers também têm potencial para serem usados em aplicações de reconhecimento de voz. Eles podem ser treinados para converter a fala em texto, o que é útil para a transcrição de áudio, assistentes virtuais e muitas outras aplicações.",
+                    "line_count": 1,
+                    "line_number": 19,
+                    "children": []
+                },
+                {
+                    "class": "vd2-bhead-root",
+                    "type": "empty",
+                    "content": "",
+                    "line_count": 1,
+                    "line_number": 20,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "class": "bhead-root1-root",
+            "type": "heading",
+            "content": "## Análise de sentimentos",
+            "heading_level": 2,
+            "line_count": 7,
+            "line_number": 21,
+            "children": [
+                {
+                    "class": "bheadt2-bhead-root",
+                    "type": "text",
+                    "content": "## Análise de sentimentos",
+                    "line_count": 1,
+                    "line_number": 21,
+                    "children": []
+                },
+                {
+                    "class": "vd2-bhead-root",
+                    "type": "empty",
+                    "content": "",
+                    "line_count": 1,
+                    "line_number": 22,
+                    "children": []
+                },
+                {
+                    "class": "tx2-bhead-root",
+                    "type": "text",
+                    "content": "A análise de sentimentos é outra aplicação comum dos Transformers. Eles podem ser usados para entender o sentimento expressado em um texto, seja ele positivo, negativo ou neutro. Isso é útil em muitos contextos, como monitoramento de mídias sociais, análise de feedback do cliente e muito mais.",
+                    "line_count": 1,
+                    "line_number": 23,
+                    "children": []
+                },
+                {
+                    "class": "vd2-bhead-root",
+                    "type": "empty",
+                    "content": "",
+                    "line_count": 1,
+                    "line_number": 24,
+                    "children": []
+                },
+                {
+                    "class": "bhead-bhead-root2-bhead-root",
+                    "type": "heading",
+                    "content": "# Conclusão",
+                    "heading_level": 1,
+                    "line_count": 3,
+                    "line_number": 25,
+                    "children": [
+                        {
+                            "class": "bheadt3-bhead-bhead-root",
+                            "type": "text",
+                            "content": "# Conclusão",
+                            "line_count": 1,
+                            "line_number": 25,
+                            "children": []
+                        },
+                        {
+                            "class": "vd3-bhead-bhead-root",
+                            "type": "empty",
+                            "content": "",
+                            "line_count": 1,
+                            "line_number": 26,
+                            "children": []
+                        },
+                        {
+                            "class": "tx3-bhead-bhead-root",
+                            "type": "text",
+                            "content": "Em resumo, os Transformers têm uma ampla gama de aplicações em muitos campos diferentes. Eles são uma ferramenta valiosa para a Inteligência Artificial e estão moldando o futuro do processamento de linguagem natural. Para explorar ainda mais, os tópicos relacionados incluem arquitetura de Transformers, treinamento de modelos Transformer e técnicas de otimização para Transformers.",
+                            "line_count": 1,
+                            "line_number": 27,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

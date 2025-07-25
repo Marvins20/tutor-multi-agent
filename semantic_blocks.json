@@ -4,14 +4,14 @@
         "block": [
             "#NXT\n---\n\n- [ ] Próxima etapa\n\n",
             "block_keyword",
-            "bkey-bhead-root-bhead-root"
+            "bkey-bhead-root2-bhead-root"
         ],
-        "change_class": "bkey-bhead-root-bhead-root-30",
+        "change_class": "bkey-bhead-root2-bhead-root-32",
         "origin_file_path": "/Users/marcusabr/Documents/AI Journey/Arquivo de Teste.md",
         "sentence_type": "Finished",
-        "context": " Me esclareça sobre [[Revolta de Canudos]]\n\n\nO que é [[Protocolo A2A do Google]]\n\nMe fale sobre [[Agente de IA]]\n\nalou\n\n\n> Me fale sobre a Guerra fria por favor aqui\n\n[[Guerra fria]]\n\n## Segunda Guerra mundial\n\nSobre o assunto\n\n\n#QST\n---\n\nUma pergunta da ia o que são [[RAGs de IA]]\n\nsua reposta asdas\n\n#NXT\n---\n\n- [ ] Próxima etapa\n",
+        "context": " Me esclareça sobre [[Revolta de Canudos]]\n\n\nO que é [[Protocolo A2A do Google]]\n\nMe fale sobre [[Agente de IA]]\n\nalou\n\n\n> Me fale sobre a Guerra fria por favor aqui\n\n[[Guerra fria]]\n\n## Segunda Guerra mundial\n\nSobre o assunto\n\n> eu gostari de falar sobre\n\n\n#QST\n---\n\nUma pergunta da ia o que são [[RAGs de IA]]\n\nsua reposta asdas\n\n#NXT\n---\n\n- [ ] Próxima etapa\n",
         "location": [
-            30,
+            32,
             [
                 0,
                 0

@@ -78,7 +78,22 @@ class EnvironmentContextQueue:
             )
 
     def refine_interaction_queue(self):
-        pass
+        final_blocks = []
+        refined_question = {}
+        question_blocks = [block for block in self.interaction_queue if block.sentence_type == SentenceType.INTERROGATIVE]
+        for block in question_blocks:
+            if block.location not in refined_question:
+                refined_question[block.location] = block
+        refined_questions = list(refined_question.values())
+
+        final_blocks.append(refined_questions)
+
+        refined_other_blocks = {}
+        other_blocks = [block for block in self.interaction_queue if block.sentence_type != SentenceType.INTERROGATIVE]
+        for block in other_blocks:
+            if block.location[0] not in refined_other_blocks:
+                refined_other_blocks[block.location] = block
+        final_blocks.extend(refined_other_blocks.values())
 
     def block_line_changes(self, line_number:int, changes: List[Tuple[str, Tuple[int, int]]]):
 
